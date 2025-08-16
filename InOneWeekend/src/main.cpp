@@ -45,3 +45,13 @@ for (int y = 0; y < image_height; y++) {
 }
 
 UpdateTexture(texture, pixels);
+
+
+while (!WindowShouldClose()) {
+    BeginDrawing();
+    ClearBackground(BLACK);
+
+    DrawTexture(texture, 0, 0, WHITE);
+
+    EndDrawing();
+}
