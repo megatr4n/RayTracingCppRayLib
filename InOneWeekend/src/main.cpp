@@ -27,3 +27,7 @@ vec3 ray_color(const ray& r, const hittable& world, int depth) {
     auto t = 0.5 * (unit_direction.y() + 1.0);
         return (1.0 - t) * vec3(1.0, 1.0, 1.0) + t * vec3(0.5, 0.7, 1.0);
 }
+
+Color* pixels = (Color*)MemAlloc(image_width * imahe_height * sizeof(Color));
+
+Texture2D texture = LoadTextureFromImage(img);
