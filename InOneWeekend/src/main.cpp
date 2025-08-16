@@ -55,3 +55,11 @@ while (!WindowShouldClose()) {
 
     EndDrawing();
 }
+
+UnloadTexture(texture);
+
+MemFree(pixels);
+
+UnloadImage(img);
+
+CloseWindow();
