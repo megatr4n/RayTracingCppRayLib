@@ -31,3 +31,17 @@ vec3 ray_color(const ray& r, const hittable& world, int depth) {
 Color* pixels = (Color*)MemAlloc(image_width * imahe_height * sizeof(Color));
 
 Texture2D texture = LoadTextureFromImage(img);
+
+
+for (int y = 0; y < image_height; y++) {
+    for (int x = 0; x < image_width; x++) {
+
+        unsigned char r = (unsigned char)(255.0f * x / image_width);
+        unsigned char g = (unsigned char)(255.0f * y / image_height);
+        unsigned char b = 128;
+
+        pixels[y * image_width + x] = (Color) { r, g, b, 255 };
+    }
+}
+
+UpdateTexture(texture, pixels);
